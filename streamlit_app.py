@@ -67,3 +67,10 @@ if ingredients_list:  # Cleaning Up Empty Brackets
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered, ' + name_on_order + '!', icon="✅")
+
+    # Display fruityvice nutrition information
+    #note: issue with fruityvice.com - disabling for now!
+    #import requests
+    #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+    ##st.text(fruityvice_response.json())
+    #fv_df = st.datafame(data=fruityvice_response.json(), use_container_width=True)
